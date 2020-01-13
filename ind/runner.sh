@@ -1,0 +1,14 @@
+./quicksort 500 500 >> logger.txt
+./quicksort 1000 500 >> logger.txt
+./quicksort 2000 500 >> logger.txt
+./quicksort 4000 500 >> logger.txt
+./quicksort 8000 500 >> logger.txt
+./quicksort 16000 500 >> logger.txt
+./quicksort 32000 500 >> logger.txt
+./quicksort 64000 500 >> logger.txt
+./quicksort 128000 500 >> logger.txt
+./quicksort 256000 500 >> logger.txt
+./quicksort 512000 500 >> logger.txt
+./quicksort 1000000 500 >> logger.txt
+./quicksort 2000000 500 >> logger.txt
+./quicksort 4000000 500 >> logger.txt

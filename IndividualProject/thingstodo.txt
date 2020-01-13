@@ -1,0 +1,51 @@
+Find potential optimizations of serial part
+	?????????
+	Changed from int to unsigned int
+	Using valgrind cachegrind to find branches
+		Result: Partition BCMs
+	Gprof finds swap to be the most used
+Try different pivotelements
+See potential improvements for the parallized part(if statements for where serial is better)
+
+
+TIMES FOR UNOPTIMIZED AND NO FLAGS
+N	T
+1000	0.000466
+5000	0.002467 
+10000	0.005567
+20000	0.005245
+40000	0.016041
+80000	0.037603
+160000	0.112648
+320000	0.401730
+640000	1.530910 
+1000000	3.602131
+1500000	7.908002
+2000000	13.995665 
+2500000	21.830621
+3500000	42.934965 
+4500000	72.513822
+
+TIMES FOR PARALLEILZED NON OPTIMZED AND NO FLAGS 4 threads
+
+
+N	T
+1000	0.000386
+5000	0.003411 
+10000	0.008924
+20000	0.009489
+40000	0.016041
+80000	0.037181
+160000	0.086721
+320000	0.221022
+640000	0.742605 
+1000000	1.758583
+1500000	3.879396
+2000000	7.043032 
+2500000	10.687760
+3500000	22.337134 
+4500000	37.789803
+
+
+This implies that there is a cutoff where openMPs overhead is bigger, thus implement an if statement where if n<100000 do serial 
+
